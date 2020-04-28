@@ -125,4 +125,4 @@ git push -f
 Some time there is merge conflict occur due to some reason we are not resolve conflict very well. At time some portion of remote code in our local branch with message **merge is in progess**. So we have to abort that merge using abort command
 **git merge --abort**
 
-**Now prettier won't complain about CR and all developers can now live in peace! **
+**Now prettier won't complain about CR and all developers can now live in peace!**
