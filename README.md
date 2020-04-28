@@ -80,3 +80,19 @@ Although a git fetch is very useful in order to get the remote information of a 
 ![Alt Text](https://res.cloudinary.com/practicaldev/image/fetch/s---X5AXldj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zifpnl1h6a4tk4qdc9sy.gif)
 
 Awesome, we're now perfectly in sync with the remote branch and have all the latest changes! 
+
+## Reflog
+
+Everyone makes mistakes, and that's totally okay! Sometimes it may feel like you've screwed up your git repo so badly that you just want to delete it entirely.
+
+git reflog is a very useful command in order to show a log of all the actions that have been taken! This includes merges, resets, reverts: basically any alteration to your branch.
+
+![Alt Text](https://res.cloudinary.com/practicaldev/image/fetch/s--MMUdOS0P--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/1aqek1py1knwl926ele7.gif)
+
+If you made a mistake, you can easily redo this by resetting HEAD based on the information that reflog gives us!
+
+Say that we actually didn't want to merge the origin branch. When we execute the git reflog command, we see that the state of the repo before the merge is at HEAD@{1}. Let's perform a git reset to point HEAD back to where it was on HEAD@{1}!
+
+![Alt Text](https://res.cloudinary.com/practicaldev/image/fetch/s--A1UMM2AH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/9z9rhtbw7mrigp0miijz.gif)
+
+We can see that the latest action has been pushed to the reflog!
