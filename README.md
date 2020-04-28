@@ -110,17 +110,17 @@ We can see that the latest action has been pushed to the reflog!
 
 **Most useful commad to undo changes or move HEAD to specific point**
 
-**Hard Reset**
-git reset --hard 'xxxxx'
-git push -f
+**Hard Reset**<br/>
+ git reset --hard 'xxxxx'<br/>
+ git push -f<br/>
 
-**Soft Reset**
-git reset --keep HEAD@{xxxxx}
-git push -f
+**Soft Reset**<br/>
+ git reset --keep HEAD@{xxxxx}<br/>
+ git push -f<br/>
 
-**Undo Remote Commit**
-git revert [commit to undo]
-git push -f
+**Undo Remote Commit**<br/>
+ git revert {xxxxx}<br/>
+ git push -f<br/>
 
 Some time there is merge conflict occur due to some reason we are not resolve conflict very well. At time some portion of remote code in our local branch with message **merge is in progess**. So we have to abort that merge using abort command
 **git merge --abort**
