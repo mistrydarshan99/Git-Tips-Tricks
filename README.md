@@ -11,6 +11,17 @@ Useful git command that display how to resolve issue in live project
  git config --global --edit
 
  And this command is very useful, as it allows for editing user configuration in a text editor.
+ 
+**git log --oneline** : Compact way to view commit history 
+
+Sometime there is scenerio happened in which by mistake we take pull from another branch. In that case we have to undo that 
+pull for that below commnad is very handy.
+
+**git reset --keep HEAD@{1}**
+
+In above command Head@{RESET_INDEX}. So we have to pass upto what index we have reset our branch.
+
+Now question is come how to get reset index. For getting reset index we have to use most know command of git is **git reflog** in which are able to see reset index. For reflog explain detail in below.
 
 I thought it would be the perfect use case to create some visualized examples of the most common and useful commands! 🥳 Many of the commands I'm covering have optional arguments that you can use in order to change their behavior. In my examples, I'll cover the default behavior of the commands without adding (too many) config options!
 
@@ -96,3 +107,22 @@ Say that we actually didn't want to merge the origin branch. When we execute the
 ![Alt Text](https://res.cloudinary.com/practicaldev/image/fetch/s--A1UMM2AH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/9z9rhtbw7mrigp0miijz.gif)
 
 We can see that the latest action has been pushed to the reflog!
+
+**Most useful commad to undo changes or move HEAD to specific point**
+
+**Hard Reset**
+git reset --hard 'xxxxx'
+git push -f
+
+**Soft Reset**
+git reset --keep HEAD@{xxxxx}
+git push -f
+
+**Undo Remote Commit**
+git revert [commit to undo]
+git push -f
+
+Some time there is merge conflict occur due to some reason we are not resolve conflict very well. At time some portion of remote code in our local branch with message **merge is in progess**. So we have to abort that merge using abort command
+**git merge --abort**
+
+**Now prettier won't complain about CR and all developers can now live in peace! **
